@@ -1,0 +1,11 @@
+# Netlify build settings — used automatically when the site is linked to this
+# GitHub repo, so every push to `main` builds & deploys.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single-page app fallback (harmless with hash routing, future-proof).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
